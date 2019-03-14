@@ -484,7 +484,7 @@ client.on("message", message => {
 [❖═════ بطاطس ═══════❖]
 برفكس = $
 عدد اوامر = 50
-By = Fox Team
+By = بطاطس
 ping = ${Date.now() - message.createdTimestamp}ms
 [❖═════ بطاطس ═══════❖]
 $فكك
@@ -544,7 +544,7 @@ $sug
 سيرفر الدعم الفني  :  قريبا قريبا
 $ping 
 $inv
-[❖═════ FoxGames ═══════❖]
+[❖═════ بطاطس ═══════❖]
        **  `)
    message.channel.sendEmbed(embed)
    
