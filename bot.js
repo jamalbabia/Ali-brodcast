@@ -481,12 +481,12 @@ client.on("message", message => {
          .setColor("RANDOM")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
-[❖═════ بطاطس ═══════❖]
+[❖═════ best rewards ═══════❖]
 برفكس = $
 عدد اوامر = 50
 By = بطاطس
 ping = ${Date.now() - message.createdTimestamp}ms
-[❖═════ بطاطس ═══════❖]
+[❖═════ best rewards ═══════❖]
 $فكك
 $اسرع
 $عواصم
@@ -538,13 +538,13 @@ $role
 $ct
 عمل روم كاتبي
 
-[❖═════ بطاطس ═══════❖]
+[❖═════ best rewards ═══════❖]
 اذا وجهتك مشكلة او عندك اقتراح 
 $sug
 سيرفر الدعم الفني  :  قريبا قريبا
 $ping 
 $inv
-[❖═════ بطاطس ═══════❖]
+[❖═════ best rewards ═══════❖]
        **  `)
    message.channel.sendEmbed(embed)
    
