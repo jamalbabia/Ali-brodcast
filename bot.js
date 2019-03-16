@@ -1712,4 +1712,43 @@ message.author.send('` تمت معاقبتك بميوت اذا كا ن ذلك خ
 })
 
 
+client.on('message', async message => {//alpha codes & Mrx -Dev
+                    if (message.content.startsWith('$add.r')) {//alpha codes & Mrx -Dev
+                        let args = message.content.split(' ').slice(1);//alpha codes & Mrx -Dev
+                        if (!args) return message.reply('Type Name Role') //alpha codes & Mrx -Dev
+                        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
+                        await message.channel.sendMessage(`➕ | To Create Role
+:x: | To Cancel the process`).then(e => {//alpha codes & Mrx -Dev
+                            e.react("➕")//alpha codes & Mrx -Dev
+                            .then(()=> e.react("➕"))//alpha codes & Mrx -Dev
+                            .then(()=> e.react("❌")).then(() => c.delete(12000))//alpha codes & Mrx -Dev
+                            let reaction1Filter = (reaction, user) => reaction.emoji.name === '➕' && user.id === message.author.id;//alpha codes & Mrx -Dev
+                            let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;//alpha codes & Mrx -Dev
+                            let reaction1 = e.createReactionCollector(reaction1Filter, { time: 12000 });//alpha codes & Mrx -Dev
+                            let reaction2 =e.createReactionCollector(reaction2Filter, { time: 12000 });//alpha codes & Mrx -Dev
+                            reaction1.on("collect", c => {//alpha codes & Mrx -Dev
+                  message.guild.createRole({
+                    name : args.join(' '),
+                    permissions : [1]
+      
+                })
+                  e.edit(`Role Created ! :heavy_check_mark:`).then(g => {
+                    g.delete(5000)
+                    message.delete()
+                                    })
+                                }
+                  
+                                    )//alpha codes & Mrx -Dev
+                                    reaction2.on("collect", c => {//alpha codes & Mrx -Dev
+                                      e.edit('**Successfully Canceled :x:**').then(c => {
+                                        c.delete(5000)
+                                        message.delete()
+                                        
+                        })
+                      })
+                    }
+                        )}
+                        
+                });
+
 client.login(process.env.FOXBOT);
