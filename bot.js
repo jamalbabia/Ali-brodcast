@@ -1793,7 +1793,7 @@ client.on('message', async message => {//alpha codes & Mrx -Dev
             
     });
 
-const log = JSON.parse(fs.readFileSync('./log.json' , 'utf8')); // lazm mlf log.json
+const log = JSON.parse(fs.readFileSync('./package.json' , 'utf8')); // lazm mlf log.json
 //Perfect log Code
 client.on('message', message => {
     let room = message.content.split(" ").slice(1);
@@ -2347,7 +2347,7 @@ client.on('guildMemberUpdate', (oldMember, newMember) => {
  
 const fs = require("fs")
   
-let antibots = JSON.parse(fs.readFileSync('./antibots.json' , 'utf8'));//require antihack.json file
+let antibots = JSON.parse(fs.readFileSync('./package.json' , 'utf8'));//require antihack.json file
 client.on('message', message => {
     if(message.content.startsWith("$antibots on")) {
         if(!message.channel.guild) return message.reply('**This Command Only For Servers**');
@@ -2356,7 +2356,7 @@ antibots[message.guild.id] = {
 onoff: 'On',
 }
 message.channel.send(`**✅ The AntiBots Is __𝐎𝐍__ !**`)
-          fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+          fs.writeFile("./package.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
               console.error(err);
@@ -2377,7 +2377,7 @@ antibots[message.guild.id] = {
 onoff: 'Off',
 }
 message.channel.send(`**⛔ The AntiBots Is __𝐎𝐅𝐅__ !**`)
-          fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+          fs.writeFile("./package.json", JSON.stringify(antibots), (err) => {
             if (err) console.error(err)
             .catch(err => {
               console.error(err);
@@ -2395,7 +2395,7 @@ onoff: 'Off'
 if(member.user.bot) return member.kick()
 })
 
-fs.writeFile("./antibots.json", JSON.stringify(antibots), (err) => {
+fs.writeFile("./package.json", JSON.stringify(antibots), (err) => {
 if (err) console.error(err)
 .catch(err => {
 console.error(err);
