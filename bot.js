@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 client.on('ready', function(){
     var ms = 10000 ;
-    var setGame = [' $help','بطاطس','By بطاطس',' بطاطس ',' $help'];
+    var setGame = [' $help','best rewards','By 88 ','best rewards',' $help'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -16,7 +16,7 @@ client.on('ready', function(){
         client.user.setGame(setGame[i],`http://www.twitch.tv/jamal_pro`);
     }, ms);
   console.log('---------------');
-  console.log('بطاطس Is Online')
+  console.log('best rewards Is Online')
   console.log('---------------')
 });
 
@@ -557,7 +557,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: invite your server `)
-        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=548436570361823232&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=555862712912183296&permissions=8&scope=bot`)
         .setThumbnail("https://lh3.googleusercontent.com/QWWnPPqYFIhYSOhCLI8gDqxfAroEB9y56zbeMZxOhbs2Npe9bkFCghr-9ZO5xG2PcZCKKQ=s64")        
      message.channel.sendEmbed(embed);
        }
