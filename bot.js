@@ -1825,4 +1825,100 @@ client.on('message', function(message) {
     }
 })
 
+client.on('message', rw => {
+  if (rw.content.startsWith('$voise.ban')) {
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+let men = rw.mentions.users.first()
+let mas = rw.author
+if(!men) return rw.channel.send('``');
+rw.guild.channels.forEach(c => {
+c.overwritePermissions(men.id, {
+          CONNECT: false
+})
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+YOU CANT JOIN THE VOICE ROOM
+BANNER : <@${rw.author.id}> **`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL)
+.setDescription(`          <@${men.id}>
+BANNED
+BANNER : <@${rw.author.id}> `)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(10000)})
+    }
+})
+ 
+ //فكه
+client.on('message', rw => {
+  if (rw.content.startsWith('$voise.uneban')) {
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+ let men = rw.mentions.users.first()
+ let mas = rw.author
+ if(!men) return rw.channel.send('`MANTION THE MEMBER `');
+ rw.guild.channels.forEach(c => {
+ c.overwritePermissions(men.id, {
+         CONNECT: true
+ })
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setDescription(`**
+ <@${men.id}>
+ Welcome Back
+Back With : <@${rw.author.id}> **`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+          
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL)
+.setDescription(`          <@${men.id}>
+GO FOR VOICE NOW
+With : <@${rw.author.id}>
+`)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(15000)})
+    }
+}) 
+
+
+client.on("message", message => {
+    var prefix = ".";
+    const command = message.content.split(" ")[0];
+
+    if(command =="$voisekick"){
+
+        if (!message.guild.member(message.author).hasPermission('MOVE_MEMBERS') || !message.guild.member(message.author).hasPermission('ADMINISTRATOR')) {
+            return message.reply('you do not have permission to perform this action!');
+        }
+
+        var member = message.guild.members.get(message.mentions.users.array()[0].id);
+        if(!message.mentions.users){
+            message.reply("please mention the member")
+            return;
+        }
+
+    if(!member.voiceChannel){
+    message.reply("i can't include voice channel for member!")
+    return;
+    }
+              message.guild.createChannel('voicekick', 'voice').then(c => {
+                member.setVoiceChannel(c).then(() => {
+                    c.delete(305).catch(console.log)
+        
+
+
+    
+      });
+     });
+    }
+});
 client.login(process.env.FOXBOT);
