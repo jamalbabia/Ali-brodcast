@@ -537,8 +537,10 @@ $voise.uneban
 لتبنيد شخص من روم صوتي
 $owner
 مبرمج البوت
+$$role
+لاعطاء رتبة
 $role
-سحب رتبه واعاء رتبه
+سحب رتبه رتبه
 $add.role
 لانشاء رتبة
 $ct
@@ -1759,7 +1761,7 @@ client.on('message', async message => {//alpha codes & Mrx -Dev
 
 
 client.on('message', async message => {//alpha codes & Mrx -Dev
-        if (message.content.startsWith('$role')) {//alpha codes & Mrx -Dev
+        if (message.content.startsWith('$$role')) {//alpha codes & Mrx -Dev
           var args = message.content.split(' ').slice(2);
           let member = message.mentions.members.first();
           let role = message.guild.roles.find(r => r.name == args);
