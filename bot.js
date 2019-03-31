@@ -531,10 +531,16 @@ $say
 قريبا تحت التطوير
 $cv
 عمل روم صوتي
+$voisekick
+لطرد شخص من رمو صوتي
+$voise.uneban
+لتبنيد شخص من روم صوتي
 $owner
 مبرمج البوت
 $role
 سحب رتبه واعاء رتبه
+$add.role
+لانشاء رتبة
 $ct
 عمل روم كاتبي
 
@@ -1753,7 +1759,7 @@ client.on('message', async message => {//alpha codes & Mrx -Dev
 
 
 client.on('message', async message => {//alpha codes & Mrx -Dev
-        if (message.content.startsWith('$$role')) {//alpha codes & Mrx -Dev
+        if (message.content.startsWith('$role')) {//alpha codes & Mrx -Dev
           var args = message.content.split(' ').slice(2);
           let member = message.mentions.members.first();
           let role = message.guild.roles.find(r => r.name == args);
