@@ -531,11 +531,11 @@ $say
 قريبا تحت التطوير
 $cv
 عمل روم صوتي
-$voisekick
+$voicekick
 لطرد شخص من رمو صوتي
-$voise.ban
+$voice.ban
 لتبنيد شخص من روم صوتي
-$voise.uneban
+$voice.uneban
 لفك تبنيد شخص من روم صوتي
 $owner
 مبرمج البوت
