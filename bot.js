@@ -533,8 +533,10 @@ $cv
 عمل روم صوتي
 $voisekick
 لطرد شخص من رمو صوتي
-$voise.uneban
+$voise.ban
 لتبنيد شخص من روم صوتي
+$voise.uneban
+لفك تبنيد شخص من روم صوتي
 $owner
 مبرمج البوت
 $$role
@@ -552,7 +554,7 @@ $sug
 سيرفر الدعم الفني  :  قريبا قريبا
 $ping 
 $inv
-[❖═════ best rewards ═══════❖]
+[❖═════ 「𝟵𝟵」 ═══════❖]
        **  `)
    message.channel.sendEmbed(embed)
    
@@ -1930,23 +1932,7 @@ client.on("message", message => {
     }
 });
 
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('كلب')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تسب",
-        color: 0x06DF00,
-        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
-        footer: {
-          text: "By احب البطاطس"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
+ 
 
 
 client.on('message', message => {
@@ -1986,28 +1972,12 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('حمار')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تسب",
-        color: 0x06DF00,
-        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
-        footer: {
-          text: "By احب البطاطس"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
 
 
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('ولد')){
+    if(message.content.includes('ك س م ك')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
@@ -2025,7 +1995,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('wtf')){
+    if(message.content.includes('ق ح ب ة ')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
@@ -2043,7 +2013,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('ابن ال')){
+    if(message.content.includes('ابن قحبة ')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
@@ -2095,7 +2065,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     var args = message.content.split(/[ ]+/)
-    if(message.content.includes('ابناء')){
+    if(message.content.includes('طيزك ')){
         message.delete()
       message.channel.sendMessage("", {embed: {
         title: "لا تسب",
@@ -2111,42 +2081,6 @@ client.on('message', message => {
 }); 
 
 
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('حبة')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تسب",
-        color: 0x06DF00,
-        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
-        footer: {
-          text: "By احب البطاطس"
-        }
-      }}).then(msg => {msg.delete(3000)});
-                          }
-
-     
-}); 
-
-
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('امك')){
-        message.delete()
-      message.channel.sendMessage("", {embed: {
-        title: "لا تسب",
-        color: 0x06DF00,
-        description: "مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ ",
-        footer: {
-          text: "By احب البطاطس"
-        }
-      }}).then(msg => {msg.delete(4000)});
-                          }
-
-     
-});
 
 
 client.on('message', message => {
