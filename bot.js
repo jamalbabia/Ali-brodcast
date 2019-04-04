@@ -985,7 +985,7 @@ client.on('message', message => {
   .setFooter(`بطاطس`, '2019/2/10')
   .setColor("#000000")
   .addField("Done | تــــم" , ":envelope: | :sleuth_or_spy::skin-tone-3: تم الارسال الاوامر الي خاص")
-  .addField("** Developer Bot بطاطس :wrench: **","** بوت متكامل **")
+  .addField("** 「𝟵𝟵」 Bot بطاطس :wrench: **","** بوت متكامل **")
   
   
   message.channel.sendEmbed(embed);
@@ -1367,7 +1367,7 @@ client.on('message' , message => {
 if (message.content === '$owner') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("**Developer BoT بطاطس**")
+      .addField("**「𝟵𝟵」 BoT بطاطس**")
 .setColor('#B101FC')
   message.author.sendEmbed(embed);
     }
@@ -1836,7 +1836,7 @@ client.on('message', function(message) {
 })
 
 client.on('message', rw => {
-  if (rw.content.startsWith('$voise.ban')) {
+  if (rw.content.startsWith('$voice.ban')) {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
 let men = rw.mentions.users.first()
 let mas = rw.author
@@ -1868,7 +1868,7 @@ rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(10000)})
  
  //فكه
 client.on('message', rw => {
-  if (rw.content.startsWith('$voise.uneban')) {
+  if (rw.content.startsWith('$voice.uneban')) {
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
  let men = rw.mentions.users.first()
  let mas = rw.author
@@ -1901,7 +1901,7 @@ rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(15000)})
 
 
 client.on("message", message => {
-    var prefix = ".";
+    var prefix = "$";
     const command = message.content.split(" ")[0];
 
     if(command =="$voisekick"){
